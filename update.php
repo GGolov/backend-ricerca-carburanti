@@ -1,7 +1,7 @@
 <?php
     /*
-        Routine giornaliera che preleva di dati delgi impianti
-        da www.sviluppoeconomico.gov.it per inserirli nel
+        Routine giornaliera che preleva di dati degli impianti
+        dall'API di www.sviluppoeconomico.gov.it per inserirli nel
         database.
     */
 
@@ -22,7 +22,7 @@
         while($line = fgets($fp)) {
         	if(!strpos($line, 'Estrazione del') || !strpos($line, 'idImpianto')) {
         		$arr = split (";", $line);
-                $query = "TRUNCATE TABLE $table; INSERTO INTO $table VALUES (".implode(',', $arr).")";
+                $query = "TRUNCATE TABLE $table; INSERT INTO $table VALUES (".implode(',', $arr).")";
             }
         }
         
