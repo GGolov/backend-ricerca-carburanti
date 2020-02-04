@@ -29,6 +29,6 @@
         fclose($fp);
     }
 
-	update('http://www.sviluppoeconomico.gov.it/images/exportCSV/prezzo_alle_8.csv', 'prezzi.csv', 'prezzi');
-	update('http://www.sviluppoeconomico.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv', 'impianti.csv', 'impianti');
+	update('https://www.mise.gov.it/images/exportCSV/prezzo_alle_8.csv', 'prezzi.csv', 'prezzi');
+	update('https://www.mise.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv', 'impianti.csv', 'impianti');
 ?>
